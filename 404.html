@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 - Not Found</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;600&display=swap');
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Outfit', sans-serif;
+    background: #0a0a0a;
+    background-image: 
+        radial-gradient(ellipse at 20% 30%, rgba(255, 140, 0, 0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 70%, rgba(255, 140, 0, 0.05) 0%, transparent 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #e0e0e0;
+    min-height: 100vh;
+    padding: 20px;
+}
+.card {
+    background: linear-gradient(145deg, #141414, #1a1a1a);
+    border-radius: 32px;
+    text-align: center;
+    border: 1px solid rgba(255, 140, 0, 0.2);
+    box-shadow: 0 4px 60px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 500px;
+    padding: 60px 24px;
+}
+h1 {
+    font-size: 72px;
+    font-weight: 600;
+    color: #ff6b00;
+    margin-bottom: 16px;
+}
+p {
+    font-size: 18px;
+    color: #888;
+}
+.back-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 30px;
+    background: rgba(255, 140, 0, 0.1);
+    border: 1px solid rgba(255, 140, 0, 0.3);
+    border-radius: 50px;
+    color: #ff9a3c;
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+.back-btn:hover {
+    background: rgba(255, 140, 0, 0.2);
+}
+</style>
+</head>
+<body>
+<div class="card">
+    <h1>404</h1>
+    <p id="msg">Seite nicht gefunden</p>
+    <a href="index.html" class="back-btn">Zurück</a>
+</div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+if (params.get('lang') === 'en') {
+    document.getElementById('msg').textContent = 'Page not found';
+    document.querySelector('.back-btn').textContent = 'Back';
+}
+</script>
+</body>
+</html>
