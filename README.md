@@ -31,3 +31,7 @@ This project is copyright protected. Reproduction, distribution or any other use
 ### Contact
 
 For questions, please contact the project owner.
+
+
+
+[![demo](https://img.shields.io/discord/1478435500833636444?logo=discord)](https://discord.gg/UA7vqsvMNF)
