@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>DSGVO — Zarven</title>
-    <meta name="description" content="Datenschutzerklärung (DSGVO) für zarven.net." />
+    <meta name="description" content="Datenschutzerklaerung (DSGVO) fuer den Zarven WhatsApp Bot." />
     <link rel="icon" href="../assets/logo.jpg" type="image/jpeg" />
     <link rel="manifest" href="../assets/manifest.webmanifest" />
     <meta name="theme-color" content="#ff6b00" />
@@ -40,39 +40,54 @@
       <section class="hero">
         <div class="panel">
           <div class="panelInner">
-            <h1 class="title"><span class="grad">Datenschutzerklärung (DSGVO)</span></h1>
-            <p class="lead">Stand: <span id="dsgvoDate">—</span></p>
+            <h1 class="title"><span class="grad">Datenschutzerklaerung (DSGVO)</span></h1>
+            <p class="lead">Version: <strong id="dsgvoVersion">—</strong> · Gueltig seit: <span id="dsgvoDate">—</span></p>
             <div class="sep"></div>
-
-            <p class="homeText" style="margin-top:14px">
-              Diese Website ist statisch. Es gibt keine Benutzerkonten und kein Tracking. Die Spracheinstellung kann lokal im Browser gespeichert werden
-              (<code style="font-family:var(--mono)">localStorage</code>).
-            </p>
 
             <h2 style="margin:18px 0 0; font-size:16px; letter-spacing:.08em; text-transform:uppercase">Verantwortlicher</h2>
             <p class="homeText" style="margin-top:10px">
-              Zarven Team<br />
-              Kontakt: <a href="mailto:hello@zarven.net">hello@zarven.net</a><br />
-              (Adresse/weitere Angaben bitte ergänzen)
+              Zarven Bot Team (Kontakt ueber Team/Owner)
             </p>
 
-            <h2 style="margin:18px 0 0; font-size:16px; letter-spacing:.08em; text-transform:uppercase">Hosting / Server-Logs</h2>
+            <h2 style="margin:18px 0 0; font-size:16px; letter-spacing:.08em; text-transform:uppercase">Verarbeitete Daten</h2>
             <p class="homeText" style="margin-top:10px">
-              Beim Aufruf der Website können durch den Hosting-Anbieter technisch notwendige Daten (z.B. IP-Adresse, Datum/Uhrzeit, angefragte Ressource, User-Agent)
-              in Server-Logfiles verarbeitet werden, um Betrieb und Sicherheit zu gewährleisten. Bitte ergänze hier deinen konkreten Hosting-Anbieter und verlinke dessen
-              Datenschutzhinweise.
+              • WhatsApp Kennungen (LID/JID), Nummer (wenn technisch verfuegbar)<br />
+              • Profilangaben (Name, Alter, Rang, Coins, Level, Spiel-/Supportdaten)<br />
+              • technische Betriebsdaten (Cooldowns, Session-/Statusdaten, Logs)
             </p>
 
-            <h2 style="margin:18px 0 0; font-size:16px; letter-spacing:.08em; text-transform:uppercase">Externe Links</h2>
+            <h2 style="margin:18px 0 0; font-size:16px; letter-spacing:.08em; text-transform:uppercase">Zwecke</h2>
             <p class="homeText" style="margin-top:10px">
-              Diese Website enthält Links zu externen Seiten (z.B. Discord, Status-Seite, Subdomains). Für die Datenverarbeitung auf externen Seiten sind die jeweiligen
-              Betreiber verantwortlich.
+              • Bereitstellung der Bot-Funktionen<br />
+              • Missbrauchsschutz, Support, Moderation, Fehleranalyse
             </p>
 
-            <h2 style="margin:18px 0 0; font-size:16px; letter-spacing:.08em; text-transform:uppercase">Rechte</h2>
+            <h2 style="margin:18px 0 0; font-size:16px; letter-spacing:.08em; text-transform:uppercase">Rechtsgrundlage</h2>
             <p class="homeText" style="margin-top:10px">
-              Du hast im Rahmen der DSGVO u.a. das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung und Widerspruch. Für Anfragen:
-              <a href="mailto:hello@zarven.net">hello@zarven.net</a>.
+              • Einwilligung nach Art. 6 Abs. 1 lit. a DSGVO (fuer Registrierung/Funktionen)
+            </p>
+
+            <h2 style="margin:18px 0 0; font-size:16px; letter-spacing:.08em; text-transform:uppercase">Speicherdauer</h2>
+            <p class="homeText" style="margin-top:10px">
+              • Bis Widerruf/Loeschanfrage oder technische Notwendigkeit endet.
+            </p>
+
+            <h2 style="margin:18px 0 0; font-size:16px; letter-spacing:.08em; text-transform:uppercase">Deine Rechte</h2>
+            <p class="homeText" style="margin-top:10px">
+              • Auskunft, Berichtigung, Loeschung, Einschraenkung, Widerspruch, Datenuebertragbarkeit.<br />
+              • Widerruf jederzeit mit: <code style="font-family:var(--mono)">!dsgvo revoke</code>
+            </p>
+
+            <h2 style="margin:18px 0 0; font-size:16px; letter-spacing:.08em; text-transform:uppercase">Wichtiger Hinweis</h2>
+            <p class="homeText" style="margin-top:10px">
+              • Ohne Zustimmung ist keine (Neu-)Registrierung moeglich.<br />
+              • Bei Versionsaenderung ist erneute Zustimmung noetig.
+            </p>
+
+            <h2 style="margin:18px 0 0; font-size:16px; letter-spacing:.08em; text-transform:uppercase">Bestaetigen</h2>
+            <p class="homeText" style="margin-top:10px">
+              <code style="font-family:var(--mono)">!dsgvo accept</code><br />
+              Status: <code style="font-family:var(--mono)">!dsgvo status</code>
             </p>
           </div>
         </div>
@@ -92,8 +107,10 @@
     <script src="../assets/app.js" defer></script>
     <script>
       document.getElementById("year").textContent = String(new Date().getFullYear());
-      const fmt = new Intl.DateTimeFormat("de-DE", { year: "numeric", month: "2-digit", day: "2-digit" });
-      document.getElementById("dsgvoDate").textContent = fmt.format(new Date());
+      const version = "2026-03";
+      const effective = "2026-03-04";
+      document.getElementById("dsgvoVersion").textContent = version;
+      document.getElementById("dsgvoDate").textContent = effective;
     </script>
   </body>
 </html>
