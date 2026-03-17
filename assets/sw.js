@@ -7,11 +7,14 @@ const ASSETS = [
   "./sitemap.xml",
   "./assets/styles.css",
   "./assets/app.js",
+  "./assets/commands.js",
+  "./assets/commands.json",
   "./assets/site.js",
   "./assets/logo.jpg",
   "./assets/manifest.webmanifest",
   "./team/index.html",
   "./dsgvo/index.html",
+  "./commands/index.html",
 ];
 
 self.addEventListener("install", (event) => {

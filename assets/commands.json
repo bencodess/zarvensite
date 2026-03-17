@@ -1,0 +1,269 @@
+{
+  "version": 1,
+  "commands": {
+    "alias": {
+      "description": "Alias-Manager für eigene Shortcuts.\nSubcommands: add <alias> <command>, remove <alias>, list"
+    },
+    "apply": {
+      "description": "Startet die Team-Bewerbung (Fragen-Flow im Chat)."
+    },
+    "asupport": {
+      "description": "Teamcmd: Support-Anfrage beantworten oder verwerfen.\nNutze: !asupport <ID> <Antwort> | !asupport <ID> trash"
+    },
+    "ban": {
+      "description": "Teamcmd: Bannt einen User (id/nummer/username oder @mention/reply). Gebannte User werden ignoriert."
+    },
+    "bancmd": {
+      "description": "Ownercmd: Sperrt einen Command global.\nNutze: !bancmd <command>"
+    },
+    "banlist": {
+      "description": "Teamcmd: Zeigt alle gebannten User."
+    },
+    "bj": {
+      "description": "Blackjack (Coins-Spiel). Starte mit !bj <Einsatz> und folge den Anweisungen."
+    },
+    "cd": {
+      "description": "Zeigt deine aktuellen Cooldowns (z.B. daily, spiele, support)."
+    },
+    "changelog": {
+      "description": "Zeigt die letzten Bot-Änderungen.\nNutze: !changelog [anzahl]"
+    },
+    "changename": {
+      "description": "Ändert deinen Profilnamen (mit Bestätigung und Cooldown).\nNutze: !changename <NeuerName>"
+    },
+    "daily": {
+      "description": "Gibt dir täglich Coins. Mit Streak bekommst du mehr Coins, wenn du mehrere Tage in Folge !daily machst."
+    },
+    "del": {
+      "description": "Gruppen-Admin: Löscht eine Nachricht (reply) in der Gruppe. Bot muss Admin sein."
+    },
+    "deletebanner": {
+      "description": "Teamcmd: Entfernt das Banner eines Users (id/nummer/username oder @mention/reply)."
+    },
+    "demote": {
+      "description": "Gruppen-Admin: Nimmt Adminrechte.\nNutze: !demote @mention (oder reply / Nummer)"
+    },
+    "discord": {
+      "description": "Zeigt Discord-Invite und optional Status.\nNutze: !discord | !discord status"
+    },
+    "dsgvo": {
+      "description": "Datenschutz/DSGVO: anzeigen und akzeptieren/widerrufen.\nSubcommands: accept, revoke, status"
+    },
+    "finduser": {
+      "description": "Sucht einen User (z.B. per userid/JID/Nummer) und zeigt Basisdaten."
+    },
+    "fish": {
+      "description": "Angel-Spiel (Coins)."
+    },
+    "fishinfo": {
+      "description": "Zeigt Infos zu Fischen/Drop-Rates/Werten (Spielhilfe)."
+    },
+    "fishinv": {
+      "description": "Zeigt dein Fisch-Inventar."
+    },
+    "fishsell": {
+      "description": "Verkauft Fische aus dem Inventar für Coins."
+    },
+    "giftcoins": {
+      "description": "Schenkt Coins an einen markierten User.\nNutze: !giftcoins <betrag> @mention"
+    },
+    "give": {
+      "description": "Team/Owner: Gibt Coins (oder ähnliches) an einen User.\nNutze: !give @mention|me coins <betrag>"
+    },
+    "giverank": {
+      "description": "Ownercmd: Setzt den Rang eines Users.\nNutze: !giverank <JID|userid|@mention> <RANG>"
+    },
+    "gjid": {
+      "description": "Nur Gruppen: Zeigt Gruppen-JID und Gruppenname (Debug)."
+    },
+    "group": {
+      "description": "Teamcmd: Aktionen auf Gruppen aus !grouplist.\nSubcommands: leave <id|jid>, link <id|jid>"
+    },
+    "grouplist": {
+      "description": "Teamcmd: Listet alle Gruppen über alle Sessions (ohne @g.us Anzeige).\nNutze danach: !group link <id> | !group leave <id>"
+    },
+    "h": {
+      "description": "Kurzform für Hilfe/Menue (je nach Bot-Setup)."
+    },
+    "help": {
+      "description": "Zeigt Hilfe/Menue (je nach Bot-Setup)."
+    },
+    "hidebday": {
+      "description": "Geburtstag/Alter im Profil verstecken oder anzeigen."
+    },
+    "hidetag": {
+      "description": "Gruppen-Admin: Sendet eine Nachricht und mentiont alle (ohne sichtbare @)."
+    },
+    "id": {
+      "description": "Teamcmd: Bearbeitet Join-Requests per ID.\nNutze: !id <ID> accept/decline <Grund> [session]"
+    },
+    "info": {
+      "description": "Zeigt die Beschreibung zu einem Command aus commands.json.\nNutze: !info <command>"
+    },
+    "joinreq": {
+      "description": "Sendet eine Gruppen-Join-Anfrage ans Team (per Invite-Link).\nNutze: !joinreq <Link>"
+    },
+    "kick": {
+      "description": "Gruppen-Admin: Entfernt einen User aus der Gruppe (mention oder reply). Bot muss Admin sein."
+    },
+    "kickall": {
+      "description": "Gruppen-Admin: Entfernt alle Nicht-Admins aus der Gruppe (mit Bestätigung).\nNutze: !kickall, dann !kickall confirm"
+    },
+    "lb": {
+      "description": "Kurzform: Coins-Leaderboard."
+    },
+    "leaderboard": {
+      "description": "Zeigt die Top-Coins (Leaderboard)."
+    },
+    "leave": {
+      "description": "Ownercmd: Laesst den Bot die aktuelle Gruppe verlassen."
+    },
+    "leavemsg": {
+      "description": "Gruppen-Admin: Leave-Nachricht konfigurieren.\nNutze: !leavemsg enable|disable|set <msg>|show"
+    },
+    "level": {
+      "description": "Zeigt deine Level-Karte/Level-Info."
+    },
+    "leveling": {
+      "description": "Gruppen-Admin: Aktiviert/Deaktiviert Leveling in der Gruppe.\nNutze: !leveling enable|disable"
+    },
+    "levelleaderboard": {
+      "description": "Zeigt die Top-Level (Leaderboard)."
+    },
+    "link": {
+      "description": "Privat: Verknuepft deinen WA-Account mit Discord über 8-stelligen Code.\nNutze: !link <code>"
+    },
+    "llb": {
+      "description": "Kurzform: Level-Leaderboard."
+    },
+    "log": {
+      "description": "Ownercmd: Zeigt interne System-Logs.\nNutze: !log [anzahl]"
+    },
+    "luv": {
+      "description": "Easter-Egg / Kurzantwort."
+    },
+    "me": {
+      "description": "Zeigt dein eigenes Profil als Karte."
+    },
+    "menu": {
+      "description": "Zeigt das Command-Menue nach Kategorien.\nNutze: !menu [kategorie]"
+    },
+    "myjid": {
+      "description": "Debug: Zeigt deine JID und Chat-Typ."
+    },
+    "news": {
+      "description": "News-Funktion: User kann enable/disable; Owner kann News an alle senden.\nNutze: !news enable|disable oder (Owner) !news <Text>"
+    },
+    "ncrash": {
+      "description": "Crash-Game (Coins) in Gruppen.\nStart: !ncrash <Einsatz>\nCashout: !ncrash confirm (je später, desto höherer Multiplikator bis max 2.00x; wenn es vorher crasht, verlierst du den Einsatz).\nCooldown: 90s pro User."
+    },
+    "newsession": {
+      "description": "Ownercmd: Erstellt eine neue WhatsApp-Session und sendet QR.\nNutze: !newsession <id> | !newsession cancel"
+    },
+    "ntts": {
+      "description": "Neural TTS via piper/ffmpeg.\nNutze: !ntts <text>"
+    },
+    "otodo": {
+      "description": "Owner/Team: Interne Todo-Funktionen (siehe Bot-Ausgabe)."
+    },
+    "ownermenu": {
+      "description": "Owner-Menue (Kurzübersicht Owner-Commands)."
+    },
+    "pet": {
+      "description": "Erstellt ein petpet GIF/Sticker aus dem Avatar (mention oder reply).\nNutze: !pet @mention"
+    },
+    "ping": {
+      "description": "Zeigt WA-Ping und Discord-Ping."
+    },
+    "profile": {
+      "description": "Zeigt das Profil eines Users (mention oder reply)."
+    },
+    "promote": {
+      "description": "Gruppen-Admin: Gibt Adminrechte.\nNutze: !promote @mention (oder reply / Nummer)"
+    },
+    "ranks": {
+      "description": "Zeigt alle verfuegbaren Ranks."
+    },
+    "rawmsg": {
+      "description": "Ownercmd (Debug): Exportiert die aktuelle Nachricht als JSON.\nNutze: !rawmsg [json|full]"
+    },
+    "register": {
+      "description": "Privat: Registrierung nach DSGVO-Consent.\nNutze: !register <name>.<alter>"
+    },
+    "s": {
+      "description": "Kurzform für Sticker.\nSiehe: !sticker"
+    },
+    "sessions": {
+      "description": "Zeigt alle Sessions (Übersicht)."
+    },
+    "setbanner": {
+      "description": "Setzt/entfernt dein Profil-Banner (URL oder Bild) mit Bestätigung.\nNutze: !setbanner <url> | (Bild) !setbanner | confirm/cancel/reset"
+    },
+    "setcolor": {
+      "description": "Setzt deine Akzentfarbe für Profil/Canvas.\nNutze: !setcolor <hex|farbe> | reset"
+    },
+    "slot": {
+      "description": "Slotmaschine (Coins-Spiel).\nNutze: !slot <Einsatz>"
+    },
+    "ssp": {
+      "description": "Schere-Stein-Papier (Coins-Spiel).\nNutze: !ssp <Einsatz> [schere|stein|papier]"
+    },
+    "stats": {
+      "description": "Zeigt Bot-Statistiken (Uptime, counts, session, etc.)."
+    },
+    "sticker": {
+      "description": "Erstellt einen Sticker aus Bild/Video (ggf. nur in Stickergruppe).\nNutze: !sticker (mit Medien oder reply)"
+    },
+    "restart": {
+      "description": "Team/Owner: Startet einen kompletten Bot-Neustart (Prozess-Restart).\nNutze: !restart\nNach dem Neustart kommt eine \"Restart abgeschlossen\"-Bestätigung."
+    },
+    "support": {
+      "description": "Erstellt eine Support-Anfrage ans Team.\nNutze: !support <frage>"
+    },
+    "supportlist": {
+      "description": "Teamcmd: Listet offene Support-Anfragen."
+    },
+    "sync": {
+      "description": "Team/Owner: Visualer Session-Sync/Status."
+    },
+    "team": {
+      "description": "Zeigt Team-Mitglieder und Ranks."
+    },
+    "teamguide": {
+      "description": "Zeigt den Team-Guide (How-To für Team-Workflows)."
+    },
+    "teammenu": {
+      "description": "Team-Menue (Kurzübersicht Team-Commands)."
+    },
+    "todo": {
+      "description": "Todo-System: Aufgaben hinzufuegen/löschen/versenden.\nNutze: !todo add <text> | !todo del <id> | !todo send dc|wa"
+    },
+    "todolist": {
+      "description": "Zeigt die oeffentliche Todo-Liste."
+    },
+    "top": {
+      "description": "Kurzform: Coins-Leaderboard."
+    },
+    "tts": {
+      "description": "Text-to-Speech (Google Translate TTS).\nNutze: !tts <text>"
+    },
+    "unban": {
+      "description": "Teamcmd: Entfernt einen Ban-Eintrag (id/nummer/username oder @mention/reply)."
+    },
+    "unbancmd": {
+      "description": "Ownercmd: Entsperrt einen Command.\nNutze: !unbancmd <command>"
+    },
+    "userlist": {
+      "description": "Ownercmd (Privat): Listet alle registrierten Nutzer."
+    },
+    "welcome": {
+      "description": "Gruppen-Admin: Welcome-Nachricht konfigurieren.\nNutze: !welcome enable|disable|set <msg>|show"
+    },
+    "welcomemsg": {
+      "description": "Alias für Welcome-Config.\nNutze: !welcomemsg enable|disable|set <msg>|show"
+    },
+    "spamhandler": {
+      "description": "Erklaert, was passiert, wenn du spamst, und wie du es vermeidest."
+    }
+  }
+}
