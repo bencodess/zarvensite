@@ -28,6 +28,10 @@
       const commands = data && data.commands ? data.commands : {};
       const items = Object.keys(commands)
         .map((key) => ({ name: key, description: String(commands[key]?.description || "") }))
+        .filter((item) => {
+          const desc = item.description.toLowerCase();
+          return !/(teamcmd|ownercmd|team\/owner)/i.test(desc);
+        })
         .sort((a, b) => a.name.localeCompare(b.name));
       render(items);
 
