@@ -68,6 +68,14 @@ button{font-family:inherit}
   font-weight:700;
 }
 .brand svg{width:22px; height:22px}
+.brandLogo{
+  width:26px;
+  height:26px;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,.12);
+  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+  object-fit:cover;
+}
 .brand span{
   background:linear-gradient(135deg, var(--accent2), var(--accent));
   -webkit-background-clip:text;
@@ -260,6 +268,7 @@ footer .wrap{
   text-decoration:none;
 }
 .footerRow a:hover{color:var(--text)}
+.footerLinks{display:flex; gap:12px; align-items:center; flex-wrap:wrap}
 
 /* Home (fullscreen, no cards) */
 body.home .topbar{
@@ -303,6 +312,28 @@ body.home .nav a{background:transparent}
   gap:10px;
   flex-wrap:wrap;
   margin-top:22px;
+}
+.homeServices{margin-top:18px}
+.serviceGrid{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:10px;
+}
+.servicePill{
+  display:inline-flex;
+  align-items:center;
+  padding:10px 12px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.02);
+  text-decoration:none;
+  color:rgba(255,255,255,.85);
+}
+.servicePill:hover{
+  background:rgba(255,255,255,.05);
+  border-color:rgba(255,255,255,.18);
+  color:var(--text);
 }
 .homeMeta{margin-top:18px}
 

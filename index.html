@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Zarven</title>
     <meta name="description" content="Zarven — eine moderne, vollständig statische Website ohne Backend." />
-    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="./assets/logo.jpg" type="image/jpeg" />
     <link rel="manifest" href="./assets/manifest.webmanifest" />
     <meta name="theme-color" content="#ff6b00" />
     <link rel="stylesheet" href="./assets/styles.css" />
@@ -16,16 +16,15 @@
     <header class="topbar">
       <div class="wrap">
         <a class="brand" href="./index.html" aria-label="Zarven Home">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path fill="currentColor" d="M3 5h18v3L9.2 19H21v3H3v-3l11.8-11H3z" />
-          </svg>
+          <img class="brandLogo" src="./assets/logo.jpg" alt="" width="26" height="26" />
           <span>ZARVEN</span>
         </a>
 
         <nav class="nav" aria-label="Navigation">
-          <a href="./index.html">Home</a>
-          <a href="https://status.zarven.net" target="_blank" rel="noreferrer">Status</a>
-          <a href="./site.html">Roadmap</a>
+          <a href="./index.html" data-page="home">Home</a>
+          <a href="./team/" data-page="team">Team</a>
+          <a href="./dsgvo/" data-page="dsgvo">DSGVO</a>
+          <a href="./site.html" data-page="roadmap">Roadmap</a>
         </nav>
 
         <div class="pillbar">
@@ -41,19 +40,26 @@
     <main id="main" class="wrap homeMain">
       <section class="homeHero" aria-label="Home">
         <h1 class="homeTitle"><span class="grad" data-i18n="hero.title">ZARVEN</span></h1>
-        <p class="homeTag" data-i18n="home.tag">Vorstellung / was es ist — kurz, klar, ohne unnötigen Kram.</p>
-        <p class="homeText" data-i18n="home.about">
-          Zarven ist ein Projekt rund um Community, Tools und Experimente. Fokus: schnell, clean, zuverlässig.
-        </p>
-        <p class="homeText" data-i18n="home.what">
-          Diese Seite ist komplett statisch: keine Accounts, kein Tracking, kein Backend. Nur Content + Links.
-        </p>
+        <p class="homeTag" data-i18n="home.tag">Ein Projekt rund um Community, Tools &amp; Experimente.</p>
+        <p class="homeText" data-i18n="home.about">Ziel: schnell, clean, zuverlässig — ohne unnötigen Overhead.</p>
+        <p class="homeText" data-i18n="home.what">Die Website ist komplett statisch: keine Accounts, kein Tracking, kein Backend.</p>
 
         <div class="homeActions" aria-label="Links">
           <a class="btn discord" href="https://discord.gg/UA7vqsvMNF" target="_blank" rel="noreferrer">Discord</a>
-          <a class="btn primary" href="https://status.zarven.net" target="_blank" rel="noreferrer">Status</a>
+          <a class="btn primary" href="./team/">Team</a>
+          <a class="btn" href="./dsgvo/">DSGVO</a>
           <a class="btn" href="./site.html">Roadmap</a>
-          <button class="btn" type="button" data-copy="https://status.zarven.net">Status-Link kopieren</button>
+          <button class="btn" type="button" data-copy="https://discord.gg/UA7vqsvMNF">Invite kopieren</button>
+        </div>
+
+        <div class="homeServices" aria-label="Services">
+          <div class="small">Subdomains</div>
+          <div class="serviceGrid">
+            <a class="servicePill" href="https://liam.zarven.net" target="_blank" rel="noreferrer">liam.zarven.net</a>
+            <a class="servicePill" href="https://apfelsaft.zarven.net" target="_blank" rel="noreferrer">apfelsaft.zarven.net</a>
+            <a class="servicePill" href="https://snax.zarven.net" target="_blank" rel="noreferrer">snax.zarven.net</a>
+            <a class="servicePill" href="https://poisiniously.zarven.net" target="_blank" rel="noreferrer">poisiniously.zarven.net</a>
+          </div>
         </div>
 
         <div class="homeMeta">
@@ -65,7 +71,9 @@
     <footer>
       <div class="wrap footerRow">
         <div>All rights reserved — Zarven Team</div>
-        <a href="https://status.zarven.net" target="_blank" rel="noreferrer">status.zarven.net</a>
+        <div class="footerLinks">
+          <a href="https://status.zarven.net" target="_blank" rel="noreferrer">status.zarven.net</a>
+        </div>
       </div>
     </footer>
 

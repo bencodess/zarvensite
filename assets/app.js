@@ -47,11 +47,23 @@
   }
 
   function bindNavCurrent() {
-    const current = location.pathname.split("/").pop() || "index.html";
+    const p = location.pathname;
+    let key = "home";
+    if (p === "/" || p.endsWith("/index.html")) {
+      key = "home";
+    } else if (p.endsWith("/")) {
+      const seg = p.split("/").filter(Boolean).pop();
+      key = seg || "home";
+    } else {
+      const file = p.split("/").pop() || "index.html";
+      if (file === "site.html") key = "roadmap";
+      else if (file.endsWith(".html")) key = file.slice(0, -5);
+      else key = file;
+    }
+
     $$(".nav a").forEach((a) => {
-      const href = (a.getAttribute("href") || "").split("#")[0];
-      const target = href.split("/").pop() || "index.html";
-      if (target === current) a.setAttribute("aria-current", "page");
+      const page = a.getAttribute("data-page");
+      if (page && page === key) a.setAttribute("aria-current", "page");
     });
   }
 
@@ -145,15 +157,15 @@
   const STRINGS = {
     de: {
       "hero.title": "ZARVEN",
-      "home.tag": "Vorstellung / was es ist — kurz, klar, ohne unnötigen Kram.",
-      "home.about": "Zarven ist ein Projekt rund um Community, Tools und Experimente. Fokus: schnell, clean, zuverlässig.",
-      "home.what": "Diese Seite ist komplett statisch: keine Accounts, kein Tracking, kein Backend. Nur Content + Links.",
+      "home.tag": "Ein Projekt rund um Community, Tools & Experimente.",
+      "home.about": "Ziel: schnell, clean, zuverlässig — ohne unnötigen Overhead.",
+      "home.what": "Die Website ist komplett statisch: keine Accounts, kein Tracking, kein Backend.",
     },
     en: {
       "hero.title": "ZARVEN",
-      "home.tag": "Intro / what it is — short, clean, no clutter.",
-      "home.about": "Zarven is a project around community, tools and experiments. Focus: fast, clean, reliable.",
-      "home.what": "This page is fully static: no accounts, no tracking, no backend. Just content + links.",
+      "home.tag": "A project around community, tools & experiments.",
+      "home.about": "Goal: fast, clean, reliable — no unnecessary overhead.",
+      "home.what": "This site is fully static: no accounts, no tracking, no backend.",
     },
   };
 

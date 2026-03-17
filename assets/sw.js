@@ -9,8 +9,10 @@ const ASSETS = [
   "./assets/styles.css",
   "./assets/app.js",
   "./assets/site.js",
-  "./assets/favicon.svg",
+  "./assets/logo.jpg",
   "./assets/manifest.webmanifest",
+  "./team/index.html",
+  "./dsgvo/index.html",
 ];
 
 self.addEventListener("install", (event) => {
@@ -66,4 +68,3 @@ self.addEventListener("fetch", (event) => {
     })()
   );
 });
-
