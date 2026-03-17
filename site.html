@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Roadmap — Zarven</title>
+    <meta name="description" content="Roadmap & Status von Zarven." />
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="./assets/manifest.webmanifest" />
+    <meta name="theme-color" content="#ff6b00" />
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Zum Inhalt</a>
+
+    <header class="topbar">
+      <div class="wrap">
+        <a class="brand" href="./index.html" aria-label="Zarven Home">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M3 5h18v3L9.2 19H21v3H3v-3l11.8-11H3z" />
+          </svg>
+          <span>ZARVEN</span>
+        </a>
+
+        <nav class="nav" aria-label="Navigation">
+          <a href="./index.html">Home</a>
+          <a href="./site.html">Roadmap</a>
+        </nav>
+
+        <div class="pillbar">
+          <button class="btn" id="langBtn" type="button" aria-pressed="false">EN</button>
+          <a class="btn discord" href="https://discord.gg/UA7vqsvMNF" target="_blank" rel="noreferrer">Discord</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="wrap">
+      <section class="hero">
+        <div class="panel">
+          <div class="panelInner">
+            <h1 class="title"><span class="grad">Roadmap</span></h1>
+            <p class="lead">Alles hier ist vollständig statisch. Du kannst diese Seite als Changelog/Roadmap nutzen.</p>
+            <div class="sep"></div>
+            <div class="small">
+              Nächstes geplantes Update:
+              <strong id="countdownMeta">—</strong>
+              · <span id="countdown" data-target="2026-03-19T15:45:00+01:00">—</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="grid" aria-label="Roadmap Inhalte">
+        <article class="card">
+          <h2>Jetzt</h2>
+          <p>Basis steht: Landing, Roadmap, 404, Manifest + Offline-Cache (optional), kein Backend.</p>
+          <ul>
+            <li>Einheitliches Styling über <code style="font-family:var(--mono)">assets/styles.css</code></li>
+            <li>Copy/Language/Mailto ohne Framework</li>
+            <li>SEO-Basics: <code style="font-family:var(--mono)">robots.txt</code> + <code style="font-family:var(--mono)">sitemap.xml</code></li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2>Nächste Schritte</h2>
+          <p>Optional, falls du mehr Struktur willst:</p>
+          <ul>
+            <li>Projects-Seite mit Karten + Screens</li>
+            <li>Team-Seite mit Rollen</li>
+            <li>Updates als statische HTML-Dateien</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2>Links</h2>
+          <p>Kopieren oder direkt öffnen.</p>
+          <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:12px">
+            <a class="btn primary" href="./index.html">Zurück</a>
+            <button class="btn" type="button" data-copy="https://discord.gg/UA7vqsvMNF">Discord kopieren</button>
+          </div>
+          <div class="sep"></div>
+          <div class="small">Countdown ist in <code style="font-family:var(--mono)">assets/site.js</code>.</div>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <div>© <span id="year">2026</span> Zarven Team. All rights reserved.</div>
+        <div class="small">static · no backend</div>
+      </div>
+    </footer>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script src="./assets/app.js" defer></script>
+    <script src="./assets/site.js" defer></script>
+  </body>
+</html>
+

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Zarven</title>
+    <meta name="description" content="Zarven — eine moderne, vollständig statische Website ohne Backend." />
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="./assets/manifest.webmanifest" />
+    <meta name="theme-color" content="#ff6b00" />
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Zum Inhalt</a>
+
+    <header class="topbar">
+      <div class="wrap">
+        <a class="brand" href="./index.html" aria-label="Zarven Home">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path fill="currentColor" d="M3 5h18v3L9.2 19H21v3H3v-3l11.8-11H3z" />
+          </svg>
+          <span>ZARVEN</span>
+        </a>
+
+        <nav class="nav" aria-label="Navigation">
+          <a href="./index.html">Home</a>
+          <a href="./site.html">Roadmap</a>
+          <a href="#kontakt" data-i18n="hero.secondary">Kontakt</a>
+        </nav>
+
+        <div class="pillbar">
+          <button class="btn" id="langBtn" type="button" aria-pressed="false">EN</button>
+          <a class="btn discord" href="https://discord.gg/UA7vqsvMNF" target="_blank" rel="noreferrer">
+            <span class="icon" aria-hidden="true">⌁</span>
+            Discord
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="wrap">
+      <section class="hero" aria-label="Hero">
+        <div class="heroGrid">
+          <div class="panel">
+            <div class="panelInner">
+              <h1 class="title"><span class="grad" data-i18n="hero.title">ZARVEN</span></h1>
+              <p class="lead" data-i18n="hero.sub">Eine kleine, schnelle Static-Site: klar, modern, ohne Backend.</p>
+              <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:16px">
+                <a class="btn primary" href="./site.html" data-i18n="hero.cta">Roadmap ansehen</a>
+                <a class="btn" href="#kontakt" data-i18n="hero.secondary">Kontakt</a>
+                <button class="btn" type="button" data-copy="https://discord.gg/UA7vqsvMNF">Invite kopieren</button>
+              </div>
+              <div class="sep"></div>
+              <div class="small">Domain: <code style="font-family:var(--mono)">zarven.net</code></div>
+            </div>
+          </div>
+
+          <aside class="panel">
+            <div class="panelInner quick">
+              <div class="chip">
+                <div class="k" aria-hidden="true">⚡</div>
+                <div>
+                  <h3 data-i18n="quick.1.t">Statisch &amp; schnell</h3>
+                  <p data-i18n="quick.1.p">Kein Backend, keine Datenbank. Nur HTML/CSS/JS — läuft überall.</p>
+                </div>
+              </div>
+              <div class="chip">
+                <div class="k" aria-hidden="true">⬡</div>
+                <div>
+                  <h3 data-i18n="quick.2.t">PWA-ready</h3>
+                  <p data-i18n="quick.2.p">Offline-Cache + Manifest. Für GitHub Pages &amp; Co. geeignet.</p>
+                </div>
+              </div>
+              <div class="chip">
+                <div class="k" aria-hidden="true">✎</div>
+                <div>
+                  <h3 data-i18n="quick.3.t">Einfach anpassen</h3>
+                  <p data-i18n="quick.3.p">Texte/Links sind zentral. Du kannst alles ohne Build-Tool ändern.</p>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="grid" aria-label="Inhalte">
+        <article class="card">
+          <h2 data-i18n="card.a.t">Projekte</h2>
+          <p data-i18n="card.a.p">Platz für Bots, Tools, Experimente und Demos. Alles bleibt statisch – Inhalte sind editierbar.</p>
+          <ul>
+            <li>Landing + Roadmap + 404</li>
+            <li>Manifest + Offline-Cache (optional)</li>
+            <li>Ohne Framework, ohne Build</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2 data-i18n="card.b.t">Community</h2>
+          <p data-i18n="card.b.p">Discord ist der schnellste Einstieg. Link kopieren oder direkt beitreten.</p>
+          <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:12px">
+            <a class="btn discord" href="https://discord.gg/UA7vqsvMNF" target="_blank" rel="noreferrer">Beitreten</a>
+            <button class="btn" type="button" data-copy="https://discord.gg/UA7vqsvMNF">Link kopieren</button>
+          </div>
+        </article>
+
+        <article class="card" id="kontakt">
+          <h2 data-i18n="contact.title">Kontakt</h2>
+          <p data-i18n="contact.note">Kein Backend: dieses Formular erzeugt ein Mailto. Alternativ Link kopieren.</p>
+          <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:12px">
+            <button class="btn" type="button" data-copy="hello@zarven.net">E-Mail kopieren</button>
+          </div>
+          <form class="form" id="contactForm" data-email="hello@zarven.net">
+            <div class="field">
+              <label for="name" data-i18n="contact.name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" data-i18n-placeholder="contact.name" placeholder="Name" />
+            </div>
+            <div class="field">
+              <label for="from" data-i18n="contact.from">E-Mail/Discord</label>
+              <input id="from" name="from" type="text" autocomplete="email" data-i18n-placeholder="contact.from" placeholder="E-Mail/Discord" />
+            </div>
+            <div class="field wide">
+              <label for="message" data-i18n="contact.msg">Nachricht</label>
+              <textarea id="message" name="message" data-i18n-placeholder="contact.msg" placeholder="Nachricht" required></textarea>
+            </div>
+            <div class="wide" style="display:flex; justify-content:flex-end; gap:10px; flex-wrap:wrap">
+              <button class="btn primary" type="submit" data-i18n="contact.send">Mail öffnen</button>
+            </div>
+          </form>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <div>© <span id="year">2026</span> Zarven Team. <span data-i18n="footer.left">All rights reserved.</span></div>
+        <div data-i18n="footer.right">Datenschutz: keine Cookies, kein Tracking.</div>
+      </div>
+    </footer>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script src="./assets/app.js" defer></script>
+  </body>
+</html>
+

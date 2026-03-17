@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>404 — Zarven</title>
+    <meta name="robots" content="noindex" />
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+  <body>
+    <main class="wrap" style="min-height:calc(100vh - 120px); display:grid; place-items:center">
+      <section class="panel" style="max-width:720px; width:100%">
+        <div class="panelInner">
+          <h1 class="title" style="margin:0"><span class="grad">404</span></h1>
+          <p class="lead" id="msg">Seite nicht gefunden.</p>
+          <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px">
+            <a class="btn primary" href="./index.html">Home</a>
+            <a class="btn" href="./site.html">Roadmap</a>
+          </div>
+          <div class="sep"></div>
+          <div class="small">Tipp: Prüfe den Link oder gehe zur Startseite.</div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <div>© <span id="year">2026</span> Zarven Team.</div>
+        <div class="small">no backend · static</div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = String(new Date().getFullYear());
+      const params = new URLSearchParams(window.location.search);
+      if (params.get("lang") === "en") {
+        document.documentElement.lang = "en";
+        document.getElementById("msg").textContent = "Page not found.";
+        document.querySelectorAll("a.btn")[0].textContent = "Home";
+        document.querySelectorAll("a.btn")[1].textContent = "Roadmap";
+      }
+    </script>
+  </body>
+</html>
+
