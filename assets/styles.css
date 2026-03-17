@@ -19,17 +19,28 @@
 }
 
 *{box-sizing:border-box}
-html{color-scheme:dark}
+html{color-scheme:dark; background:var(--bg1)}
 html,body{height:100%}
 body{
   margin:0;
   font-family:var(--sans);
   color:var(--text);
+  background:transparent;
+}
+
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
   background:
     radial-gradient(900px 560px at 12% 18%, rgba(255,138,31,.16) 0%, transparent 60%),
     radial-gradient(860px 520px at 85% 78%, rgba(255,178,90,.10) 0%, transparent 55%),
-    repeating-linear-gradient(90deg, rgba(255,255,255,.04), rgba(255,255,255,.04) 1px, transparent 1px, transparent 72px),
-    linear-gradient(180deg, var(--bg0), var(--bg1));
+    linear-gradient(180deg, var(--bg0), var(--bg1)),
+    repeating-linear-gradient(90deg, rgba(255,255,255,.03), rgba(255,255,255,.03) 1px, transparent 1px, transparent 72px),
+    repeating-linear-gradient(0deg, rgba(255,255,255,.025), rgba(255,255,255,.025) 1px, transparent 1px, transparent 72px);
+  opacity:1;
+  z-index:-1;
 }
 
 a{color:inherit}
@@ -52,8 +63,8 @@ button{font-family:inherit}
   position:sticky;
   top:0;
   z-index:50;
-  backdrop-filter:saturate(1.2) blur(10px);
-  background:rgba(8,8,10,.55);
+  backdrop-filter:none;
+  background:#0f1112;
   border-bottom:1px solid var(--line);
 }
 .topbar .wrap{
@@ -295,11 +306,6 @@ footer .wrap{
 }
 
 /* Home (fullscreen, no cards) */
-body.home .topbar{
-  background:transparent;
-  border-bottom:0;
-  backdrop-filter:none;
-}
 body.home .topbar .wrap{padding-top:18px; padding-bottom:18px}
 body.home .nav a{background:transparent}
 
