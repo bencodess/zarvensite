@@ -1,19 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;600&display=swap");
 
 :root{
-  --bg0:#060909;
-  --bg1:#0b1110;
-  --text:#e8f1ee;
-  --muted:#a9b6b1;
+  --bg0:#0e0f10;
+  --bg1:#141618;
+  --text:#eef0f2;
+  --muted:#b3b8be;
   --line:rgba(255,255,255,.10);
   --shadow: 0 18px 60px rgba(0,0,0,.55);
-  --accent:#1fe7a0;
-  --accent2:#24c48c;
-  --accent3:#b7ffe4;
+  --accent:#ff8a1f;
+  --accent2:#ffb25a;
+  --accent3:#ffe0b3;
   --radius:22px;
   --radius2:14px;
   --max:1120px;
-  --focus: 0 0 0 3px rgba(31,231,160,.35);
+  --focus: 0 0 0 3px rgba(255,138,31,.35);
   --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --sans: "Space Grotesk", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji","Segoe UI Emoji";
 }
@@ -26,8 +26,8 @@ body{
   font-family:var(--sans);
   color:var(--text);
   background:
-    radial-gradient(900px 560px at 12% 18%, rgba(31,231,160,.16) 0%, transparent 60%),
-    radial-gradient(860px 520px at 85% 78%, rgba(36,196,140,.10) 0%, transparent 55%),
+    radial-gradient(900px 560px at 12% 18%, rgba(255,138,31,.16) 0%, transparent 60%),
+    radial-gradient(860px 520px at 85% 78%, rgba(255,178,90,.10) 0%, transparent 55%),
     repeating-linear-gradient(90deg, rgba(255,255,255,.04), rgba(255,255,255,.04) 1px, transparent 1px, transparent 72px),
     linear-gradient(180deg, var(--bg0), var(--bg1));
 }
@@ -42,8 +42,8 @@ button{font-family:inherit}
   top:12px;
   padding:10px 14px;
   border-radius:12px;
-  background:rgba(31,231,160,.18);
-  border:1px solid rgba(31,231,160,.35);
+  background:rgba(255,138,31,.18);
+  border:1px solid rgba(255,138,31,.35);
 }
 .skip:focus{left:12px; outline:none; box-shadow:var(--focus)}
 
@@ -107,8 +107,8 @@ button{font-family:inherit}
 }
 .nav a[aria-current="page"]{
   color:var(--text);
-  border-color:rgba(31,231,160,.28);
-  background:rgba(31,231,160,.08);
+  border-color:rgba(255,138,31,.28);
+  background:rgba(255,138,31,.08);
 }
 
 .pillbar{display:flex; gap:8px; align-items:center; justify-content:flex-end; flex-wrap:wrap}
@@ -129,10 +129,10 @@ button{font-family:inherit}
 .btn:active{transform:translateY(1px)}
 .btn:focus{outline:none; box-shadow:var(--focus)}
 .btn.primary{
-  border-color:rgba(31,231,160,.40);
-  background:linear-gradient(135deg, rgba(31,231,160,.18), rgba(36,196,140,.12));
+  border-color:rgba(255,138,31,.40);
+  background:linear-gradient(135deg, rgba(255,138,31,.18), rgba(255,178,90,.12));
 }
-.btn.primary:hover{border-color:rgba(31,231,160,.70)}
+.btn.primary:hover{border-color:rgba(255,138,31,.70)}
 .btn.discord{
   border-color:rgba(88,101,242,.55);
   background:linear-gradient(135deg, rgba(88,101,242,.22), rgba(88,101,242,.08));
@@ -189,8 +189,8 @@ button{font-family:inherit}
   border-radius:12px;
   display:grid;
   place-items:center;
-  background:rgba(31,231,160,.14);
-  border:1px solid rgba(31,231,160,.26);
+  background:rgba(255,138,31,.14);
+  border:1px solid rgba(255,138,31,.26);
   flex:0 0 auto;
 }
 .chip h3{margin:0; font-size:14px; letter-spacing:.04em}
@@ -305,7 +305,7 @@ body.home .nav a{background:transparent}
   height:8px;
   border-radius:50%;
   background:var(--accent);
-  box-shadow:0 0 14px rgba(31,231,160,.55);
+  box-shadow:0 0 14px rgba(255,138,31,.55);
 }
 .heroGrid{
   display:grid;
