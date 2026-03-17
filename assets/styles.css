@@ -255,6 +255,56 @@ footer .wrap{
   gap:12px;
   flex-wrap:wrap;
 }
+.footerRow a{
+  color:rgba(255,255,255,.70);
+  text-decoration:none;
+}
+.footerRow a:hover{color:var(--text)}
+
+/* Home (fullscreen, no cards) */
+body.home .topbar{
+  background:transparent;
+  border-bottom:0;
+  backdrop-filter:none;
+}
+body.home .topbar .wrap{padding-top:18px; padding-bottom:18px}
+body.home .nav a{background:transparent}
+
+.homeMain{
+  min-height:calc(100vh - 96px - 76px);
+  display:flex;
+  align-items:center;
+}
+.homeHero{
+  width:100%;
+  max-width:920px;
+  padding:42px 0 36px;
+}
+.homeTitle{
+  font-size:clamp(44px, 8vw, 96px);
+  line-height:1.02;
+  letter-spacing:.10em;
+  margin:0;
+}
+.homeTag{
+  margin:16px 0 0;
+  font-size:clamp(16px, 1.8vw, 20px);
+  color:rgba(255,255,255,.82);
+  max-width:56ch;
+}
+.homeText{
+  margin:12px 0 0;
+  color:var(--muted);
+  line-height:1.75;
+  max-width:66ch;
+}
+.homeActions{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:22px;
+}
+.homeMeta{margin-top:18px}
 
 @media (max-width: 920px){
   .heroGrid{grid-template-columns:1fr}
@@ -264,5 +314,5 @@ footer .wrap{
   .wrap{padding:16px}
   .card{grid-column:1/-1}
   .form{grid-template-columns:1fr}
+  .homeMain{min-height:calc(100vh - 84px - 86px)}
 }
-
