@@ -42,8 +42,8 @@ button{font-family:inherit}
   top:12px;
   padding:10px 14px;
   border-radius:12px;
-  background:rgba(255,107,0,.18);
-  border:1px solid rgba(255,107,0,.35);
+  background:rgba(31,231,160,.18);
+  border:1px solid rgba(31,231,160,.35);
 }
 .skip:focus{left:12px; outline:none; box-shadow:var(--focus)}
 
@@ -107,8 +107,8 @@ button{font-family:inherit}
 }
 .nav a[aria-current="page"]{
   color:var(--text);
-  border-color:rgba(255,107,0,.28);
-  background:rgba(255,107,0,.08);
+  border-color:rgba(31,231,160,.28);
+  background:rgba(31,231,160,.08);
 }
 
 .pillbar{display:flex; gap:8px; align-items:center; justify-content:flex-end; flex-wrap:wrap}
@@ -189,8 +189,8 @@ button{font-family:inherit}
   border-radius:12px;
   display:grid;
   place-items:center;
-  background:rgba(255,107,0,.14);
-  border:1px solid rgba(255,107,0,.26);
+  background:rgba(31,231,160,.14);
+  border:1px solid rgba(31,231,160,.26);
   flex:0 0 auto;
 }
 .chip h3{margin:0; font-size:14px; letter-spacing:.04em}
@@ -284,108 +284,147 @@ body.home .nav a{background:transparent}
 
 .homeMain{
   min-height:calc(100vh - 96px - 76px);
-  display:flex;
+  display:block;
+}
+.heroWrap{padding:28px 0 18px}
+.beta{
+  display:inline-flex;
   align-items:center;
-}
-.homeHero{
-  width:100%;
-  max-width:980px;
-  padding:46px 0 38px;
-}
-.homeHeader{
-  display:flex;
-  align-items:flex-start;
-  gap:22px;
-}
-.logoOrb{
-  width:80px;
-  height:80px;
-  border-radius:22px;
-  background:linear-gradient(135deg, rgba(31,231,160,.20), rgba(36,196,140,.12));
-  border:1px solid rgba(255,255,255,.12);
-  box-shadow: 0 20px 60px rgba(0,0,0,.45);
-  display:grid;
-  place-items:center;
-}
-.logoOrb img{
-  width:52px;
-  height:52px;
-  border-radius:14px;
-  object-fit:cover;
-}
-.eyebrow{
+  gap:10px;
   font-size:12px;
-  letter-spacing:.28em;
+  letter-spacing:.16em;
   text-transform:uppercase;
-  color:rgba(255,255,255,.65);
+  color:rgba(255,255,255,.75);
+  padding:8px 12px;
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:999px;
+  background:rgba(255,255,255,.03);
 }
-.homeTitle{
-  font-size:clamp(44px, 8vw, 92px);
-  line-height:1.02;
-  letter-spacing:.08em;
-  margin:6px 0 0;
+.betaDot{
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:var(--accent);
+  box-shadow:0 0 14px rgba(31,231,160,.55);
 }
-.homeTag{
-  margin:16px 0 0;
+.heroGrid{
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:22px;
+  align-items:stretch;
+  margin-top:18px;
+}
+.heroCopy{animation:fadeUp .6s ease both}
+.heroPanel{display:grid; gap:14px; animation:fadeUp .8s ease both}
+.heroTitle{
+  font-size:clamp(48px, 9vw, 96px);
+  line-height:1;
+  letter-spacing:.12em;
+  margin:8px 0 0;
+  color:var(--text);
+}
+.heroLead{
+  margin:14px 0 0;
   font-size:clamp(16px, 1.8vw, 20px);
-  color:rgba(255,255,255,.86);
+  color:rgba(255,255,255,.88);
   max-width:60ch;
 }
-.homeText{
-  margin:12px 0 0;
+.heroText{
+  margin:10px 0 0;
   color:var(--muted);
-  line-height:1.75;
-  max-width:70ch;
+  line-height:1.7;
+  max-width:64ch;
 }
-.homeActions{
+.heroActions{
   display:flex;
   gap:10px;
   flex-wrap:wrap;
-  margin-top:22px;
+  margin-top:18px;
 }
-.homeGrid{
-  display:grid;
-  grid-template-columns:1.1fr .9fr;
-  gap:18px;
-  margin-top:28px;
+.heroMeta{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:16px;
 }
-.homeBlock{
-  border-top:1px solid var(--line);
-  padding-top:14px;
+.metaPill{
+  font-family:var(--mono);
+  font-size:12px;
+  padding:8px 10px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.12);
+  color:var(--accent3);
+  background:rgba(255,255,255,.02);
 }
-.homeBlock h3{
-  margin:0 0 10px 0;
-  font-size:13px;
-  letter-spacing:.22em;
+.panelCard{
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:18px;
+  padding:16px;
+  background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.01));
+  box-shadow:var(--shadow);
+}
+.panelCard.ghost{
+  background:rgba(255,255,255,.02);
+  border-style:dashed;
+}
+.panelTitle{
+  font-size:12px;
+  letter-spacing:.24em;
   text-transform:uppercase;
   color:rgba(255,255,255,.70);
+  margin-bottom:12px;
 }
-.featureList{
-  list-style:none;
-  margin:0;
-  padding:0;
-  display:grid;
-  gap:10px;
-}
-.featureItem{
+.panelRow{
   display:flex;
-  align-items:flex-start;
-  gap:10px;
+  justify-content:space-between;
+  padding:8px 0;
+  border-bottom:1px solid rgba(255,255,255,.08);
   color:rgba(255,255,255,.88);
 }
-.featureDot{
-  width:10px;
-  height:10px;
-  margin-top:6px;
-  border-radius:50%;
-  background:linear-gradient(135deg, var(--accent2), var(--accent));
-  box-shadow:0 0 18px rgba(31,231,160,.45);
-  flex:0 0 auto;
+.panelRow strong{color:var(--text)}
+.panelRow:last-of-type{border-bottom:0}
+.panelHint{
+  margin-top:10px;
+  font-size:12px;
+  color:rgba(255,255,255,.55);
+}
+.section{padding:22px 0}
+.sectionHead h2{
+  margin:0;
+  font-size:22px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.sectionHead p{
+  margin:8px 0 0;
+  color:var(--muted);
+}
+.cardGrid{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:14px;
+  margin-top:14px;
+}
+.featureCard{
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:18px;
+  padding:16px;
+  background:rgba(255,255,255,.02);
+}
+.featureCard h3{
+  margin:0;
+  font-size:16px;
+}
+.featureCard p{
+  margin:8px 0 0;
+  color:var(--muted);
+  line-height:1.6;
 }
 .cmdRow{
   display:flex;
   flex-wrap:wrap;
   gap:8px;
+  margin-top:10px;
 }
 .cmdPill{
   font-family:var(--mono);
@@ -420,15 +459,20 @@ body.home .nav a{background:transparent}
 }
 .homeMeta{margin-top:18px}
 
+@keyframes fadeUp{
+  from{opacity:0; transform:translateY(10px)}
+  to{opacity:1; transform:translateY(0)}
+}
+
 @media (max-width: 920px){
   .heroGrid{grid-template-columns:1fr}
   .card{grid-column:span 6}
   .homeGrid{grid-template-columns:1fr}
+  .cardGrid{grid-template-columns:1fr}
 }
 @media (max-width: 620px){
   .wrap{padding:16px}
   .card{grid-column:1/-1}
   .form{grid-template-columns:1fr}
   .homeMain{min-height:calc(100vh - 84px - 86px)}
-  .homeHeader{flex-direction:column}
 }

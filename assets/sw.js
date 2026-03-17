@@ -2,7 +2,6 @@ const VERSION = "zarven-site-v1";
 const ASSETS = [
   "./",
   "./index.html",
-  "./site.html",
   "./404.html",
   "./robots.txt",
   "./sitemap.xml",

@@ -56,8 +56,7 @@
       key = seg || "home";
     } else {
       const file = p.split("/").pop() || "index.html";
-      if (file === "site.html") key = "roadmap";
-      else if (file.endsWith(".html")) key = file.slice(0, -5);
+      if (file.endsWith(".html")) key = file.slice(0, -5);
       else key = file;
     }
 
@@ -158,13 +157,13 @@
     de: {
       "hero.title": "ZARVEN",
       "home.tag": "Moderation, Games, Coins, Sticker und Tools fuer Gruppen.",
-      "home.about": "Stabiler Betrieb, schnelle Commands, klare Regeln und Team-Features.",
+      "home.about": "Schnell, stabil, teamfaehig. Gebaut fuer grosse Gruppen und klare Regeln.",
       "home.what": "Der Bot laeuft auf Baileys und ist auf Gruppen-Management und Unterhaltung ausgelegt.",
     },
     en: {
       "hero.title": "ZARVEN",
       "home.tag": "Moderation, games, coins, stickers and tools for groups.",
-      "home.about": "Stable ops, fast commands, clear rules and team features.",
+      "home.about": "Fast, stable, team-ready. Built for large groups and clear rules.",
       "home.what": "Built on Baileys for group management and entertainment.",
     },
   };
