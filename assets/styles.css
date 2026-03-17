@@ -1,19 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;600&display=swap");
+
 :root{
-  --bg0:#070708;
-  --bg1:#0b0b0d;
-  --text:#eaeaf0;
-  --muted:#a2a2ad;
+  --bg0:#060909;
+  --bg1:#0b1110;
+  --text:#e8f1ee;
+  --muted:#a9b6b1;
   --line:rgba(255,255,255,.10);
   --shadow: 0 18px 60px rgba(0,0,0,.55);
-  --accent:#ff6b00;
-  --accent2:#ff9a3c;
-  --accent3:#ffe2c9;
+  --accent:#1fe7a0;
+  --accent2:#24c48c;
+  --accent3:#b7ffe4;
   --radius:22px;
   --radius2:14px;
-  --max:1100px;
-  --focus: 0 0 0 3px rgba(255,107,0,.35);
-  --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  --max:1120px;
+  --focus: 0 0 0 3px rgba(31,231,160,.35);
+  --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --sans: "Space Grotesk", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji","Segoe UI Emoji";
 }
 
 *{box-sizing:border-box}
@@ -24,8 +26,9 @@ body{
   font-family:var(--sans);
   color:var(--text);
   background:
-    radial-gradient(900px 560px at 15% 15%, rgba(255,140,0,.12) 0%, transparent 60%),
-    radial-gradient(860px 520px at 85% 80%, rgba(255,140,0,.08) 0%, transparent 55%),
+    radial-gradient(900px 560px at 12% 18%, rgba(31,231,160,.16) 0%, transparent 60%),
+    radial-gradient(860px 520px at 85% 78%, rgba(36,196,140,.10) 0%, transparent 55%),
+    repeating-linear-gradient(90deg, rgba(255,255,255,.04), rgba(255,255,255,.04) 1px, transparent 1px, transparent 72px),
     linear-gradient(180deg, var(--bg0), var(--bg1));
 }
 
@@ -126,10 +129,10 @@ button{font-family:inherit}
 .btn:active{transform:translateY(1px)}
 .btn:focus{outline:none; box-shadow:var(--focus)}
 .btn.primary{
-  border-color:rgba(255,107,0,.40);
-  background:linear-gradient(135deg, rgba(255,154,60,.16), rgba(255,107,0,.12));
+  border-color:rgba(31,231,160,.40);
+  background:linear-gradient(135deg, rgba(31,231,160,.18), rgba(36,196,140,.12));
 }
-.btn.primary:hover{border-color:rgba(255,107,0,.60)}
+.btn.primary:hover{border-color:rgba(31,231,160,.70)}
 .btn.discord{
   border-color:rgba(88,101,242,.55);
   background:linear-gradient(135deg, rgba(88,101,242,.22), rgba(88,101,242,.08));
@@ -286,32 +289,112 @@ body.home .nav a{background:transparent}
 }
 .homeHero{
   width:100%;
-  max-width:920px;
-  padding:42px 0 36px;
+  max-width:980px;
+  padding:46px 0 38px;
+}
+.homeHeader{
+  display:flex;
+  align-items:flex-start;
+  gap:22px;
+}
+.logoOrb{
+  width:80px;
+  height:80px;
+  border-radius:22px;
+  background:linear-gradient(135deg, rgba(31,231,160,.20), rgba(36,196,140,.12));
+  border:1px solid rgba(255,255,255,.12);
+  box-shadow: 0 20px 60px rgba(0,0,0,.45);
+  display:grid;
+  place-items:center;
+}
+.logoOrb img{
+  width:52px;
+  height:52px;
+  border-radius:14px;
+  object-fit:cover;
+}
+.eyebrow{
+  font-size:12px;
+  letter-spacing:.28em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.65);
 }
 .homeTitle{
-  font-size:clamp(44px, 8vw, 96px);
+  font-size:clamp(44px, 8vw, 92px);
   line-height:1.02;
-  letter-spacing:.10em;
-  margin:0;
+  letter-spacing:.08em;
+  margin:6px 0 0;
 }
 .homeTag{
   margin:16px 0 0;
   font-size:clamp(16px, 1.8vw, 20px);
-  color:rgba(255,255,255,.82);
-  max-width:56ch;
+  color:rgba(255,255,255,.86);
+  max-width:60ch;
 }
 .homeText{
   margin:12px 0 0;
   color:var(--muted);
   line-height:1.75;
-  max-width:66ch;
+  max-width:70ch;
 }
 .homeActions{
   display:flex;
   gap:10px;
   flex-wrap:wrap;
   margin-top:22px;
+}
+.homeGrid{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:18px;
+  margin-top:28px;
+}
+.homeBlock{
+  border-top:1px solid var(--line);
+  padding-top:14px;
+}
+.homeBlock h3{
+  margin:0 0 10px 0;
+  font-size:13px;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.70);
+}
+.featureList{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:grid;
+  gap:10px;
+}
+.featureItem{
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+  color:rgba(255,255,255,.88);
+}
+.featureDot{
+  width:10px;
+  height:10px;
+  margin-top:6px;
+  border-radius:50%;
+  background:linear-gradient(135deg, var(--accent2), var(--accent));
+  box-shadow:0 0 18px rgba(31,231,160,.45);
+  flex:0 0 auto;
+}
+.cmdRow{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+.cmdPill{
+  font-family:var(--mono);
+  font-size:12px;
+  padding:8px 10px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.02);
+  color:var(--accent3);
 }
 .homeServices{margin-top:18px}
 .serviceGrid{
@@ -340,10 +423,12 @@ body.home .nav a{background:transparent}
 @media (max-width: 920px){
   .heroGrid{grid-template-columns:1fr}
   .card{grid-column:span 6}
+  .homeGrid{grid-template-columns:1fr}
 }
 @media (max-width: 620px){
   .wrap{padding:16px}
   .card{grid-column:1/-1}
   .form{grid-template-columns:1fr}
   .homeMain{min-height:calc(100vh - 84px - 86px)}
+  .homeHeader{flex-direction:column}
 }

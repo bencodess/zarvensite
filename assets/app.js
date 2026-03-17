@@ -157,15 +157,15 @@
   const STRINGS = {
     de: {
       "hero.title": "ZARVEN",
-      "home.tag": "Ein Projekt rund um Community, Tools & Experimente.",
-      "home.about": "Ziel: schnell, clean, zuverlässig — ohne unnötigen Overhead.",
-      "home.what": "Die Website ist komplett statisch: keine Accounts, kein Tracking, kein Backend.",
+      "home.tag": "Moderation, Games, Coins, Sticker und Tools fuer Gruppen.",
+      "home.about": "Stabiler Betrieb, schnelle Commands, klare Regeln und Team-Features.",
+      "home.what": "Der Bot laeuft auf Baileys und ist auf Gruppen-Management und Unterhaltung ausgelegt.",
     },
     en: {
       "hero.title": "ZARVEN",
-      "home.tag": "A project around community, tools & experiments.",
-      "home.about": "Goal: fast, clean, reliable — no unnecessary overhead.",
-      "home.what": "This site is fully static: no accounts, no tracking, no backend.",
+      "home.tag": "Moderation, games, coins, stickers and tools for groups.",
+      "home.about": "Stable ops, fast commands, clear rules and team features.",
+      "home.what": "Built on Baileys for group management and entertainment.",
     },
   };
 

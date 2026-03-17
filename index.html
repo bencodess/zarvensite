@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Zarven</title>
-    <meta name="description" content="Zarven — eine moderne, vollständig statische Website ohne Backend." />
+    <meta name="description" content="Zarven WhatsApp Bot: Moderation, Spiele, Coins, Sticker und Tools." />
     <link rel="icon" href="./assets/logo.jpg" type="image/jpeg" />
     <link rel="manifest" href="./assets/manifest.webmanifest" />
     <meta name="theme-color" content="#ff6b00" />
@@ -39,17 +39,54 @@
 
     <main id="main" class="wrap homeMain">
       <section class="homeHero" aria-label="Home">
-        <h1 class="homeTitle"><span class="grad" data-i18n="hero.title">ZARVEN</span></h1>
-        <p class="homeTag" data-i18n="home.tag">Ein Projekt rund um Community, Tools &amp; Experimente.</p>
-        <p class="homeText" data-i18n="home.about">Ziel: schnell, clean, zuverlässig — ohne unnötigen Overhead.</p>
-        <p class="homeText" data-i18n="home.what">Die Website ist komplett statisch: keine Accounts, kein Tracking, kein Backend.</p>
+        <div class="homeHeader">
+          <div class="logoOrb">
+            <img src="./assets/logo.jpg" alt="" width="52" height="52" />
+          </div>
+          <div>
+            <div class="eyebrow">WHATSAPP BOT</div>
+            <h1 class="homeTitle"><span class="grad" data-i18n="hero.title">ZARVEN</span></h1>
+            <p class="homeTag" data-i18n="home.tag">Moderation, Games, Coins, Sticker und Tools fuer Gruppen.</p>
+            <p class="homeText" data-i18n="home.about">Stabiler Betrieb, schnelle Commands, klare Regeln und Team-Features.</p>
+          </div>
+        </div>
+
+        <p class="homeText" data-i18n="home.what">
+          Der Bot laeuft auf Baileys und ist auf Gruppen-Management und Unterhaltung ausgelegt.
+        </p>
 
         <div class="homeActions" aria-label="Links">
           <a class="btn discord" href="https://discord.gg/UA7vqsvMNF" target="_blank" rel="noreferrer">Discord</a>
           <a class="btn primary" href="./team/">Team</a>
           <a class="btn" href="./dsgvo/">DSGVO</a>
           <a class="btn" href="./site.html">Roadmap</a>
-          <button class="btn" type="button" data-copy="https://discord.gg/UA7vqsvMNF">Invite kopieren</button>
+          <button class="btn" type="button" data-copy="!help">Copy !help</button>
+        </div>
+
+        <div class="homeGrid">
+          <div class="homeBlock">
+            <h3>Core</h3>
+            <ul class="featureList">
+              <li class="featureItem"><span class="featureDot"></span>Moderation: kick, ban, antilink, antisticker</li>
+              <li class="featureItem"><span class="featureDot"></span>Economy: coins, daily, leaderboard, shop</li>
+              <li class="featureItem"><span class="featureDot"></span>Games: fish, bj, mini games, fun cmds</li>
+              <li class="featureItem"><span class="featureDot"></span>Stickers: create, edit, petpet, packs</li>
+            </ul>
+          </div>
+          <div class="homeBlock">
+            <h3>Commands</h3>
+            <div class="cmdRow">
+              <span class="cmdPill">!help</span>
+              <span class="cmdPill">!discord</span>
+              <span class="cmdPill">!dsgvo</span>
+              <span class="cmdPill">!daily</span>
+              <span class="cmdPill">!fish</span>
+              <span class="cmdPill">!changelog</span>
+              <span class="cmdPill">!joinreq</span>
+              <span class="cmdPill">!ban</span>
+            </div>
+            <p class="small" style="margin-top:12px">Alle Commands kommen aus `commands.json`.</p>
+          </div>
         </div>
 
         <div class="homeServices" aria-label="Services">
@@ -63,7 +100,7 @@
         </div>
 
         <div class="homeMeta">
-          <span class="small">Domain: <code style="font-family:var(--mono)">zarven.net</code></span>
+          <span class="small">Bot Status: `status.zarven.net`</span>
         </div>
       </section>
     </main>
