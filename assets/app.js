@@ -156,9 +156,9 @@
   const STRINGS = {
     de: {
       "hero.title": "ZARVEN",
-      "home.tag": "Moderation, Games, Coins, Sticker und Tools fuer Gruppen.",
-      "home.about": "Schnell, stabil, teamfaehig. Gebaut fuer grosse Gruppen und klare Regeln.",
-      "home.what": "Der Bot laeuft auf Baileys und ist auf Gruppen-Management und Unterhaltung ausgelegt.",
+      "home.tag": "Moderation, Games, Coins, Sticker und Tools für Gruppen.",
+      "home.about": "Schnell, stabil, teamfähig. Gebaut für große Gruppen und klare Regeln.",
+      "home.what": "Der Bot läuft auf Baileys und ist auf Gruppen-Management und Unterhaltung ausgelegt.",
     },
     en: {
       "hero.title": "ZARVEN",

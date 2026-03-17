@@ -272,6 +272,27 @@ footer .wrap{
 }
 .footerRow a:hover{color:var(--text)}
 .footerLinks{display:flex; gap:12px; align-items:center; flex-wrap:wrap}
+.discordIconLink{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:28px;
+  height:28px;
+  border-radius:8px;
+  border:1px solid rgba(255,255,255,.12);
+  color:rgba(255,255,255,.85);
+  text-decoration:none;
+  background:rgba(255,255,255,.02);
+}
+.discordIconLink:hover{
+  color:var(--text);
+  background:rgba(255,255,255,.05);
+  border-color:rgba(255,255,255,.20);
+}
+.discordIconLink svg{
+  width:18px;
+  height:18px;
+}
 
 /* Home (fullscreen, no cards) */
 body.home .topbar{
@@ -459,6 +480,32 @@ body.home .nav a{background:transparent}
 }
 .homeMeta{margin-top:18px}
 
+.teamGrid{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:14px;
+}
+.teamCard{
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:18px;
+  padding:16px;
+  background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.01));
+  box-shadow:var(--shadow);
+}
+.teamName{
+  font-size:18px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.teamRole{
+  margin-top:6px;
+  color:var(--muted);
+  font-size:13px;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+.teamLinks{margin-top:12px}
+
 @keyframes fadeUp{
   from{opacity:0; transform:translateY(10px)}
   to{opacity:1; transform:translateY(0)}
@@ -469,6 +516,7 @@ body.home .nav a{background:transparent}
   .card{grid-column:span 6}
   .homeGrid{grid-template-columns:1fr}
   .cardGrid{grid-template-columns:1fr}
+  .teamGrid{grid-template-columns:1fr}
 }
 @media (max-width: 620px){
   .wrap{padding:16px}
