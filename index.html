@@ -164,14 +164,19 @@
     <script 
       src="./assets/app.js" defer>
 
+        // Diese Logik erkennt die Subdomain und schickt den User in den Unterordner
         const host = window.location.hostname;
-  const parts = host.split('.');
-  
-  // Wenn eine Subdomain da ist (z.B. sub.zarven.net)
-  if (parts.length >= 3 && parts[0] !== 'www' && parts[0] !== 'zarven') {
-    // Leite intern zum Team-Ordner weiter, behalte die Info aber in der URL
-    window.location.href = "/team/"; 
-  }
+        const parts = host.split('.');
+        
+        // Wenn es eine Subdomain ist (z.B. sub.zarven.net)
+        if (parts.length >= 3 && parts[0] !== 'www' && parts[0] !== 'zarven') {
+            // Wir leiten weiter zu /team/, aber hängen den Namen als Parameter an,
+            // damit dein Script im team-Ordner weiß, wer gemeint ist.
+            window.location.href = "/Team/?user=" + parts[0];
+        } else {
+            // Wenn man nur zarven.net aufruft, zeig das Menü
+            window.location.href = "/Team/menu.html";
+        }
       </script>
   </body>
 </html>
