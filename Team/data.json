@@ -1,0 +1,156 @@
+{
+  "localhost": {
+    "name": "Local Test",
+    "image": " ",
+    "experience": "3 Jahre | Localhost Erfahrung",
+    "roles": [
+      { "name": "System", 
+      "icon": "fa-server" },
+      { "name": "Debugger", 
+      "icon": "fa-bug" },
+      { "name": "Entwickler", 
+      "icon": "fa-code" }
+    ],    
+    "about": "Das ist ein Test-Profil auf deinem lokalen Server. Wenn du das hier siehst, funktioniert die JSON-Anbindung und das Subdomain-Script erkennt deinen Host!",
+        
+    "tasks": [
+      "Erfolgreich JSON laden",
+      "Template-IDs prüfen",
+      "Dark Mode testen"
+    ],  
+      
+    "goals": "Dieses System auf alle Subdomains von Zarven ausrollen und dabei fehlerfrei bleiben.",   
+     
+    "joined": "17.03.2026",
+    "teamSince": "2026"
+  },
+  
+ 
+  
+  "snax": {
+    "name": "SnaX",
+    "image": "https://snax.zarven.net/Profile/SnaX.png",
+    "experience": "3 Jahre | Developer Erfahrung",    
+    "roles": [
+      {"name": "Admin", 
+      "icon": "fa-crown"},
+      {"name": "Developer", 
+      "icon": "fa-terminal"},
+      {"name": "Website-Master", 
+      "icon": "fa-globe"},
+      {"name": "Tester", 
+      "icon": "fa-vial"}
+    ],    
+    "about": "Hey liebe Zarven Community! Ich bin Julian oder auch SnaX. Ich achte darauf, dass ihr ein voll funktionsfähiges System habt, sodass ihr bei der Nutzung von Zarven auf keine Fehler mehr stoßen solltet. Übrigens unterstütze ich Ben sehr gerne, da er mir mittlerweile ein echt guter Freund geworden ist!",    
+    
+    "tasks": ["Fehlersuche & Debugging", 
+    "Update- & Verbesserungsvorschläge", 
+    "Konzeption neuer Features"], 
+       
+    "goals": "Das größte Netzwerk der Welt mit dem Team und der Community aufbauen und dabei das Design immer im perfekten Zustand halten!",
+        
+    "joined": "14.03.2026",
+    "teamSince": "2025"
+  },
+  
+ 
+ 
+      "apfelsaft": {
+        "name": "Apfelsaft",
+        "image": "https://apfelsaft.zarven.net/apfelsaft.jpg",
+        "experience": "1 Jahr | Community Erfahrung",
+        "roles": [
+            {
+                "name": "Supporter",
+                "icon": "fa-user-tie"
+            },
+            {
+                "name": "Ideen-Master",
+                "icon": "fa-lightbulb"
+            },
+            {
+                "name": "Tester",
+                "icon": "fa-vial"
+            },
+            {
+                "name": "Geist?",
+                "icon": "fa-ghost"
+            }
+        ],
+        "about": "Hallo liebe Zarven Community! Ich bin Apfelsaft. \nIch sorge dafür, dass eure Fragen geklärt werden und bringe regelmäßig neue Ideen ein, um das Projekt voranzubringen.",
+        "tasks": [
+            "Neue Konzepte planen & Ideen bringen",
+            "Supportanfragen beantworten & Fragen klären",
+            "Neue Features testen"
+        ],
+        "goals": "Die Community unterstützen, den Austausch fördern und mit meinen Ideen dafür sorgen, dass Zarven immer besser wird!",
+        "joined": "16.03.2026",
+        "teamSince": "2026"
+    },
+
+
+
+    "liam": {
+        "name": "Liam",
+        "image": "https://liam.zarven.net/liam.jpg",
+        "experience": "1 Jahr | Community Java Developer Erfahrung",
+        "roles": [
+            {
+                "name": "Moderator",
+                "icon": "fa-user-shield"
+            },
+            {
+                "name": "Supporter",
+                "icon": "fa-user-tie"
+            },
+            {
+                "name": "Ideen-Master",
+                "icon": "fa-lightbulb"
+            }
+        ],
+        "about": "Hallo liebe Zarven Community! Ich bin Liam. Ich sorge dafür, dass ihr hier Spaß habt und eure Support-Fragen schnell beantwortet werden. <br>Ich bin schon seit der v1 dabei – damals noch als User (auch bei Serobot), aber jetzt unterstütze ich das Team aktiv!",
+        "tasks": [
+            "Support & User-Hilfe",
+            "Chat-Moderation & Ordnung",
+            "Konzepte für neue Commands"
+        ],
+        "goals": "Aktiven Community-Support bieten und innovative Konzepte zur Weiterentwicklung des Projekts beisteuern!",
+        "joined": "10.03.2026",
+        "teamSince": "2026"
+    },
+
+
+
+        "poisiniously": {
+        "name": "Poisiniously",
+        "image": "https://poisiniously.zarven.net/vincent.jpg",
+        "experience": "1 Jahr | Moderation Erfahrung",
+        "roles": [
+            {
+                "name": "Moderator",
+                "icon": "fa-user-shield"
+            },
+            {
+                "name": "Supporter",
+                "icon": "fa-user-tie"
+            },
+            {
+                "name": "Ideen-Master",
+                "icon": "fa-lightbulb"
+            },
+            {
+                "name": "Tester",
+                "icon": "fa-vial"
+            }
+        ],
+        "about": "Hey liebe Zarven Community! Ich bin Vincent oder auch Poisiniously. Ich achte darauf, dass ihr Spaß im Main Chat haben könnt. <br>Ben kenne ich schon seit der V1 - seitdem hat sich viel getan und alles ist deutlich besser geworden!",
+        "tasks": [
+            "Fokus auf den Zarven-Main Chat",
+            "Planung & Einbringung neuer Konzepte",
+            "Prüfung neuer Features auf Fehler"
+        ],
+        "goals": "Mein Ziel ist es, den Zarven-Main Chat sauber und freundlich zu halten. <br>Ich möchte dafür sorgen, dass sich jeder User willkommen fühlt, und kümmere mich darum, dass Anfragen schnell und zuverlässig bearbeitet werden.",
+        "joined": "02.03.2026",
+        "teamSince": "2026"
+    }       
+}
