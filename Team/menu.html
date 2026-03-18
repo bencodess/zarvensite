@@ -98,6 +98,35 @@
             gap: 18px;
         }
 
+        .back-btn {
+            position: fixed;
+            top: 30px;
+            left: 30px;
+            background: rgba(255, 140, 0, 0.1);
+            backdrop-filter: blur(5px);
+            color: var(--primary-orange);
+            width: 55px;
+            height: 55px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 140, 0, 0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            font-size: 1.4rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: var(--transition);
+            z-index: 100;
+        }
+
+        .back-btn:hover {
+            transform: scale(1.1) rotate(-8deg);
+            background: var(--primary-orange);
+            color: white;
+            box-shadow: 0 0 30px var(--primary-orange);
+            border-color: var(--primary-orange);
+        }
+
         .team-btn {
             background: var(--glass-bg);
             backdrop-filter: blur(20px);
@@ -183,7 +212,9 @@
         <div class="particle" style="width: 40px; height: 40px; left: 85%; animation-duration: 18s;"></div>
         <div class="particle" style="width: 60px; height: 60px; left: 50%; animation-duration: 15s;"></div>
     </div>
-
+<a href="https://zarven.net/" class="back-btn" title="Zur Startseite">
+        <i class="fas fa-home"></i>
+    </a>
     <div class="menu-container" id="mainMenu">
         <h1 class="menu-title">Das Team</h1>
 
