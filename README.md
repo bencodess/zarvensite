@@ -1,5 +1,10 @@
 # zarvensite
 
-Statische Website (ohne Backend) für `zarven.net`.
+STATISCH!
 
-- Inhalte: `index.html`, `404.html`, `assets/*`
+
+
+##TODOS
+
+- MongoDB API implementieren
+- Wenn API Implementiert - Account search und verwaltung!
