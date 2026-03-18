@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Profil | Zarven</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+    --primary-orange: #ff8c00;
+    --bg-color: #f8fafc; 
+    --text-color: #1e293b;
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --info-box-bg: rgba(0, 0, 0, 0.03);
+    --info-box-border: rgba(0, 0, 0, 0.05);
+    --card-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+    --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    --overlay-opacity: 0.15;
+}
+
+.dark-mode {
+    --bg-color: #0a0a0c;
+    --text-color: #f1f5f9;
+    --glass-bg: rgba(20, 20, 25, 0.8);
+    --info-box-bg: rgba(255, 255, 255, 0.03);
+    --info-box-border: rgba(255, 255, 255, 0.08);
+    --card-shadow: 0 40px 100px rgba(0, 0, 0, 0.6);
+    --overlay-opacity: 0.85;
+}
+        
+  * { box-sizing: border-box; -webkit-user-select: none; user-select: none; -webkit-tap-highlight-color: transparent; }
+       
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            transition: var(--transition);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 80px 20px 40px; 
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;        
+        background: linear-gradient(var(--bg-color), var(--bg-color)), url('background.jpg');
+            background-size: cover;
+            background-position: center;
+            z-index: -2;
+            opacity: var(--overlay-opacity);
+            transition: var(--transition);
+        }
+
+        .theme-toggle {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            background: var(--glass-bg);
+            color: var(--primary-orange);
+            border: 1px solid var(--primary-orange);
+            width: 55px;
+            height: 55px;
+            border-radius: 15px;
+            cursor: pointer;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.4rem;
+            backdrop-filter: blur(5px);
+            transition: var(--transition);
+        }
+        .theme-toggle:hover { transform: scale(1.1); }
+
+        .particles {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            background: var(--primary-orange);
+            border-radius: 50%;
+            opacity: 0.3;
+            filter: blur(5px);
+            animation: move 15s linear infinite;
+        }
+
+        .back-btn {
+            position: fixed;
+            top: 30px;
+            left: 30px;
+            background: rgba(255, 140, 0, 0.1);
+            backdrop-filter: blur(5px);
+            color: var(--primary-orange);
+            width: 55px;
+            height: 55px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 140, 0, 0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            font-size: 1.4rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: var(--transition);
+            z-index: 100;
+        }
+
+        .back-btn:hover {
+            transform: scale(1.1) rotate(-8deg);
+            background: var(--primary-orange);
+            color: white;
+            box-shadow: 0 0 30px var(--primary-orange);
+            border-color: var(--primary-orange);
+        }
+
+        .profile-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 140, 0, 0.2);
+            border-radius: 40px;
+            width: 100%;
+            max-width: 650px;
+            padding: 80px 40px 40px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 40px 100px rgba(0,0,0,0.8);
+            animation: slideUp 1s ease-out;
+            box-shadow: var(--card-shadow);
+        }
+
+        .profile-img-container {
+    position: absolute;
+    top: -90px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 180px;
+    height: 180px;
+    z-index: 5;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 6px solid var(--primary-orange);
+    object-fit: cover;
+    box-shadow: 0 15px 40px rgba(255, 140, 0, 0.4);
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}      
+
+        h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 5px;
+    background: linear-gradient(to bottom, #1e293b, #475569);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: var(--transition);
+}
+
+.dark-mode h1 {
+    background: linear-gradient(to bottom, #ffffff, #cbd5e1);
+    -webkit-background-clip: text;
+}
+
+        .age-badge {
+            color: var(--primary-orange);
+            font-weight: 600;
+            letter-spacing: 1px;
+            display: block;
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+        }
+
+        .roles {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 35px;
+        }
+
+        .role-tag {
+            background: rgba(255, 140, 0, 0.1);
+            border: 1px solid var(--primary-orange);
+            padding: 8px 20px;
+            border-radius: 12px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            color: var(--primary-orange);
+            transition: var(--transition);
+        }
+
+        .role-tag:hover {
+            background: var(--primary-orange);
+            color: white;
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 10px 20px rgba(255, 140, 0, 0.4);
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            text-align: left;
+        }
+
+        .info-box {
+    background: var(--info-box-bg); 
+    padding: 25px;
+    border-radius: 20px;
+    border: 1px solid var(--info-box-border); 
+    transition: var(--transition);
+}
+
+
+        .info-box:hover {
+            border-color: var(--primary-orange);
+            background: rgba(255, 140, 0, 0.05);
+            transform: translateY(-3px);
+        }
+
+        .info-box h3 {
+            color: var(--primary-orange);
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .info-box p {
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        .membership {
+            margin-top: 40px;
+            padding-top: 25px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+            font-size: 0.85rem;
+            color: #888;
+        }
+
+        .membership span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .membership i { color: var(--primary-orange); }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) translateX(-50%); }
+            50% { transform: translateY(-15px) translateX(-50%); }
+        }
+
+        @keyframes move {
+            from { transform: translateY(100vh) scale(1); }
+            to { transform: translateY(-100px) scale(1.5); }
+        }
+
+        @media (max-width: 500px) {
+            .profile-card { padding: 80px 20px 30px; }
+            h1 { font-size: 2.2rem; }
+            .back-btn, .theme-toggle { top: 15px; width: 45px; height: 45px; }
+            .back-btn { left: 15px; }
+            .theme-toggle { right: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="particles">
+        <div class="particle" style="width: 100px; height: 100px; left: 10%; animation-delay: 0s;"></div>
+        <div class="particle" style="width: 50px; height: 50px; left: 80%; animation-delay: 5s;"></div>
+        <div class="particle" style="width: 80px; height: 80px; left: 40%; animation-delay: 2s;"></div>
+    </div>
+
+    <button class="theme-toggle" onclick="toggleDarkMode()">
+        <i class="fas fa-moon"></i>
+    </button>
+    
+    <a href="menu.html" class="back-btn" title="Zur Startseite">
+        <i class="fas fa-arrow-left"></i>
+    </a>
+
+    <div class="profile-card">
+        <div class="profile-img-container">
+    <img src="placeholder.png" alt="Profil" id="p-img" class="profile-img">
+</div>
+
+<h1 id="p-name">Lade...</h1>
+
+<span class="age-badge" id="p-experience">
+    <i class="fas fa-bolt"></i> Lade Erfahrung...
+</span>
+
+<div class="roles" id="p-roles">
+    </div>
+
+<div class="info-grid">
+    <div class="info-box">
+        <h3><i class="fas fa-quote-left"></i> Über mich</h3>
+        <p id="p-about">Lade...</p>
+    </div>
+    <div class="info-box">
+        <h3><i class="fas fa-rocket"></i> Meine Aufgaben</h3>
+        <p id="p-tasks">Lade...</p>
+    </div>
+    <div class="info-box">
+        <h3><i class="fas fa-bullseye"></i> Meine Ziele</h3>
+        <p id="p-goals">Lade...</p>
+    </div>
+</div>
+
+<div class="membership">
+    <span id="p-joined"><i class="fas fa-calendar-alt"></i> Lade...</span>
+    <span id="p-teamSince"><i class="fas fa-code-branch"></i> Lade...</span>
+</div>
+    </div>
+<script>
+// Variable, um die geladenen Daten global für den Darkmode-Wechsel verfügbar zu machen
+let currentProfileData = null;
+
+async function initProfileSystem() {
+    const hostname = window.location.hostname;
+    // Sucht erst nach ?user= im Link, sonst nimmt er die Subdomain
+    const urlParams = new URLSearchParams(window.location.search);
+    let subdomain = urlParams.get('user') || hostname.split('.')[0]; 
+    
+    if (subdomain === "" || subdomain === "127" || subdomain === "zarven" || subdomain === "www") subdomain = "localhost";
+
+    try {
+        const response = await fetch('data.json'); 
+        if (!response.ok) throw new Error("JSON konnte nicht geladen werden");
+        
+        const allData = await response.json();
+        currentProfileData = allData[subdomain];
+
+        if (!currentProfileData) {
+            currentProfileData = allData["localhost"];
+        }
+
+        if (currentProfileData) {
+            renderProfile(currentProfileData);
+            updateProfileImage(currentProfileData);
+        }
+
+    } catch (error) {
+        console.error("System-Fehler:", error);
+        updateProfileImage(null);
+    }
+}
+
+function renderProfile(data) {
+    document.title = `${data.name} | Team Profil`;
+    document.getElementById('p-name').innerText = data.name;
+    document.getElementById('p-experience').innerHTML = `<i class="fas fa-bolt"></i> ${data.experience}`;
+    document.getElementById('p-about').innerText = data.about;
+    document.getElementById('p-goals').innerText = data.goals;
+    document.getElementById('p-joined').innerHTML = `<i class="fas fa-calendar-alt"></i> Seit ${data.joined}`;
+    document.getElementById('p-teamSince').innerHTML = `<i class="fas fa-code-branch"></i> Im Team seit ${data.teamSince}`;
+
+    document.getElementById('p-roles').innerHTML = data.roles.map(role => 
+        `<span class="role-tag"><i class="fas ${role.icon}"></i> ${role.name}</span>`
+    ).join('');
+
+    document.getElementById('p-tasks').innerHTML = data.tasks.map(t => `• ${t}<br>`).join('');
+}
+
+// HIER IST DIE ANPASSUNG FÜR DEN PROFILE-ORDNER
+function updateProfileImage(data) {
+    const imgElement = document.getElementById('p-img');
+    const isDark = document.body.classList.contains("dark-mode");
+    
+    // Das ../ geht aus dem "team" ordner raus, damit er "Profile" findet
+    const path = "../Profile/"; 
+
+    if (data && data.image && data.image.trim() !== "") {
+        // Wenn ein echtes Bild da ist, nimm es aus dem Profile-Ordner
+        imgElement.src = path + data.image;
+    } else {
+        // Wenn kein Bild da ist: Nutze die Platzhalter aus dem Profile-Ordner
+        imgElement.src = isDark ? path + 'default_white.png' : path + 'default_black.png';
+    }
+}
+
+function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+    const isDark = document.body.classList.contains("dark-mode");
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+    
+    updateThemeIcon();
+    updateProfileImage(currentProfileData);
+}
+
+function updateThemeIcon() {
+    const icon = document.querySelector(".theme-toggle i");
+    if (!icon) return;
+    const isDark = document.body.classList.contains("dark-mode");
+    icon.classList.replace(isDark ? "fa-moon" : "fa-sun", isDark ? "fa-sun" : "fa-moon");
+}
+
+window.onload = () => {
+    if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark-mode");
+    }
+    updateThemeIcon();
+    initProfileSystem();
+};
+</script>
+</body>
+</html>
